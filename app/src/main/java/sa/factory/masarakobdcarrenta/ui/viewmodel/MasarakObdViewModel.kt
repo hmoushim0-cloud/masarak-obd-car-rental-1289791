@@ -61,10 +61,10 @@ class MasarakObdViewModel(
     fun addToCart(item: MasarakObdItem) = manageCartUseCase.add(item)
     fun removeFromCart(item: MasarakObdItem) = manageCartUseCase.remove(item)
 
-    fun checkout() {
+    fun checkout(paymentMethod: String = "Mada Contactless EMV") {
         viewModelScope.launch {
             _uiState.update { it.copy(isCheckingOut = true) }
-            val order = processCheckoutUseCase()
+            val order = processCheckoutUseCase(paymentMethod)
             _uiState.update { it.copy(isCheckingOut = false, lastOrder = order, activeTab = "checkout") }
         }
     }

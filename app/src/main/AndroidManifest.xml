@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:label="تطبيق مسارك للتأجير — مراجعة وإصلاح البكسلات وإعدا"
+        android:label="مسارك لتأجير السيارات الذكية - Masarak Car Rental"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
         <activity
